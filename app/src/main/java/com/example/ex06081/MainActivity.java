@@ -25,4 +25,19 @@ public class MainActivity extends AppCompatActivity {
         et = findViewById(R.id.et);
         btn = findViewById(R.id.btn);
     }
+
+    public void clicked(View view)
+    {
+        String str = et.getText().toString();
+        num = Integer.parseInt(str);
+
+        if(num % 7 == 0)
+        {
+            btn.setText("BOOM!");
+        }
+        else
+        {
+            btn.setText(num+"");
+        }
+    }
 }
